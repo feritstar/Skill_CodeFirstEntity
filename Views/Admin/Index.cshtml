@@ -8,7 +8,12 @@
 <style>
     table, th, td 
     {
-        border: 1px solid black
+        border: 1px solid black;
+        text-align:center;
+    }
+    a
+    {
+        color:cadetblue
     }
 </style>
 
@@ -17,6 +22,8 @@
         <th>&nbsp; Skill ID</th>
         <th>&nbsp; Skill Name</th>
         <th>&nbsp; Percentage Value</th>
+        <th>&nbsp; Skill Delete</th>
+        <th>&nbsp; Skill Update</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -24,6 +31,8 @@
             <td>&nbsp; @item.SkillId</td>
             <td>&nbsp; @item.SkillName</td>
             <td>&nbsp; @item.PercentageValue</td>
+            <td><a href="/Admin/SkillDelete/@item.SkillId" class="btn btn-danger">Delete</a></td>
+            <td><a class="btn btn-success">Update</a></td>
         </tr>
     }
 </table>

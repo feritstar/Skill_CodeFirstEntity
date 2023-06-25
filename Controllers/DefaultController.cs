@@ -10,10 +10,10 @@ namespace Skill_CodeFirstEntity.Controllers
 {
     public class DefaultController : Controller
     {
+        Context context = new Context();
         // GET: Default
         public ActionResult Index()
         {
-            Context context = new Context();
             var query = context.Skills.ToList();
             return View(query);
         }

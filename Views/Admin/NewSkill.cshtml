@@ -1,0 +1,27 @@
+﻿@model Skill_CodeFirstEntity.Models.MyClass.Skill
+@{
+    ViewBag.Title = "NewSkill";
+    Layout = "~/Views/Shared/_LayoutNavBar.cshtml";
+}
+
+<style>
+    div 
+    {
+        margin-bottom: 20px
+    }
+</style>
+
+<form class ="form-group" method="post">
+    <div>
+        <label>Skill Description</label>
+        @Html.TextBoxFor(x=>x.SkillName, new { @class="form-control"})
+    </div>
+    <div>
+        <label>Skill Value</label>
+        @Html.TextBoxFor(x=>x.PercentageValue, new { @class="form-control" })
+    </div>
+    <div>
+        <button class="btn btn-primary">Add Skill</button>
+    </div>
+</form>
+
