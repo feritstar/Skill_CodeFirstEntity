@@ -39,5 +39,22 @@ namespace Skill_CodeFirstEntity.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult SkillUpdate(int id)
+        {
+            var query = context.Skills.Find(id);
+            return View("SkillUpdate", query);
+        }
+
+        [HttpPost]
+        public ActionResult SkillUpdate(Skill skill)
+        {
+            var query = context.Skills.Find(skill.SkillId);
+            query.SkillName = skill.SkillName;
+            query.PercentageValue = skill.PercentageValue;
+            context.SaveChanges();
+            return View("Index");
+        }
     }
 }
