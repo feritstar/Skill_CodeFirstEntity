@@ -1,0 +1,30 @@
+﻿@using Skill_CodeFirstEntity.Models.MyClass
+@model List<Skill>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavBar.cshtml";
+}
+
+<style>
+    table, th, td 
+    {
+        border: 1px solid black
+    }
+</style>
+
+<table style="width:80%">
+    <tr>
+        <th>&nbsp; Skill ID</th>
+        <th>&nbsp; Skill Name</th>
+        <th>&nbsp; Percentage Value</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>&nbsp; @item.SkillId</td>
+            <td>&nbsp; @item.SkillName</td>
+            <td>&nbsp; @item.PercentageValue</td>
+        </tr>
+    }
+</table>
+
