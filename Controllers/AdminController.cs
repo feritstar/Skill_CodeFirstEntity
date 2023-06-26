@@ -54,7 +54,7 @@ namespace Skill_CodeFirstEntity.Controllers
             query.SkillName = skill.SkillName;
             query.PercentageValue = skill.PercentageValue;
             context.SaveChanges();
-            return View("Index");
+            return RedirectToAction("Index");
         }
     }
 }

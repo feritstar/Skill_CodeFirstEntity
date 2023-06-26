@@ -21,7 +21,8 @@
         @Html.TextBoxFor(x => x.PercentageValue, new { @class = "form-control" })
     </div>
     <div>
-        <button class="btn btn-info">Update Skill</button>
+        <input type="hidden" id="SkillId" name="SkillId" value="@Model.SkillId" />
+        <button class="btn btn-warning">Update</button>
     </div>
 </form>
 
